@@ -51,7 +51,11 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
   /**
   TODO:
     * Calculate a Jacobian here.
+    Only for RADAR measurements the Jacobian must be computed.
+    The Matrix is 3x4 with output variables range,bearing,range rate
+    and inputs px,py,vx,vy
   */
+
 	MatrixXd Hj(3,4);
 	//recover state parameters
 	float px = x_state(0);
